@@ -6,6 +6,7 @@
     <title>Inscrição - Aulão Solidário ETE/Enem</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
     <style>
+        /* Reset básico */
         * {
             margin: 0;
             padding: 0;
@@ -13,9 +14,10 @@
             font-family: Arial, sans-serif;
         }
 
-        /* USANDO SUA IMAGEM CORRETA: Aulão.jpg */
+        /* Fundo com a imagem */
         body {
-            background-image: url('Aulão.jpg'); 
+            /* Certifique-se que o arquivo de imagem na sua pasta se chama 'Aulão.jpg' */
+            background-image: url('imgaulaocad.jpg'); 
             background-size: cover; 
             background-position: center top; 
             background-repeat: no-repeat; 
@@ -27,6 +29,7 @@
             padding: 20px 10px; 
         }
 
+        /* Container do Formulário */
         .form-container {
             background-color: rgba(255, 255, 255, 0.95); 
             padding: 30px;
@@ -37,6 +40,7 @@
             margin-top: 15vh; 
         }
         
+        /* Ajuste para telas menores (celular) */
         @media (max-width: 600px) {
             .form-container {
                 margin-top: 5vh; 
@@ -47,6 +51,7 @@
             }
         }
 
+        /* Título */
         h1 {
             color: #007bff; 
             text-align: center;
@@ -54,10 +59,12 @@
             font-size: 1.8em;
         }
 
+        /* Estilo dos Grupos de Formulário */
         .form-group {
             margin-bottom: 15px;
         }
 
+        /* Estilo das Labels */
         label {
             display: block;
             margin-bottom: 5px;
@@ -65,6 +72,7 @@
             color: #333;
         }
 
+        /* Estilo dos Campos de Input e Select */
         input[type="text"], 
         select {
             width: 100%;
@@ -74,6 +82,7 @@
             font-size: 1em;
         }
 
+        /* Estilo do Botão de Envio */
         button {
             background-color: #28a745; 
             color: white;
@@ -101,7 +110,7 @@
             
             <input type="hidden" name="access_key" value="67f3f7b2-d-40b9-46f9-b1d8-57d8e2d4f394">
             
-            <input type="hidden" name="redirect" value="URL_FINAL_DO_SEU_SITE/sucesso.html">
+            <input type="hidden" name="redirect" value="https://offlipe-s.github.io/aulao/sucesso.html">
             
             <input type="hidden" name="botcheck" value="false">
 
