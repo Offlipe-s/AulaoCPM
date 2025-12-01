@@ -1,3 +1,20 @@
+Com certeza! Para deixar o título preto e dar a ele uma "borda branca" (o efeito de borda em texto é chamado de stroke ou text-shadow no CSS, dependendo do efeito desejado), vou aplicar o text-shadow.
+
+Para que o efeito fique visível sobre o fundo de cadastro que tem transparência, vou usar o text-shadow para simular a borda.
+
+Aqui está o código completo com todas as suas alterações solicitadas:
+
+Título Preto com "Borda Branca" (usando text-shadow).
+
+Transparência Aumentada no bloco de cadastro (rgba(255, 255, 255, 0.6)).
+
+Bloco Mais para Baixo (margin-top ajustado).
+
+Remoção do campo ETE/ENEM.
+
+💻 Código HTML/CSS Completo e Final
+HTML
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -18,41 +35,50 @@
         body {
             background-image: url('Simulado.jpg'); 
             background-size: cover; 
-            background-position: center top; /* Volta para o topo para melhor visualização geral */
+            background-position: center top;
             background-repeat: no-repeat; 
             background-attachment: fixed; 
             min-height: 100vh; 
             display: flex;
             justify-content: center;
-            /* Alterado para 'center' para centralizar verticalmente na tela */
-            align-items: center; 
+            /* Alterado para flex-start para controlar a posição com margin-top */
+            align-items: flex-start; 
             padding: 20px 10px; 
         }
 
         /* Container do Formulário */
         .form-container {
-            /* AUMENTO DA TRANSPARÊNCIA: 0.75 (Era 0.90) */
-            background-color: rgba(255, 255, 255, 0.10); 
+            /* MÁXIMA TRANSPARÊNCIA SOLICITADA (0.60) */
+            background-color: rgba(255, 255, 255, 0.6); 
             padding: 20px; 
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             width: 100%;
-            max-width: 400px; /* Levemente mais estreito para ocupar menos espaço */
-            /* Retirado o margin-top, pois agora está centralizado com align-items: center */
-            margin: 0; 
+            max-width: 400px; 
+            /* AUMENTADO o margin-top para empurrar o bloco para baixo */
+            margin-top: 25vh; 
         }
         
         /* Ajuste para telas menores (celular) */
         @media (max-width: 600px) {
             .form-container {
-                /* Padding um pouco maior no celular para melhor toque */
                 padding: 18px;
+                /* AUMENTADO para celular para aparecer o rosto na foto */
+                margin-top: 15vh; 
             }
         }
 
         /* Título */
         h1 {
-            color: #007bff; 
+            /* COR PRETA */
+            color: #000000; 
+            /* EFEITO DE BORDA BRANCA USANDO TEXT-SHADOW */
+            text-shadow: 
+                -1px -1px 0 #fff,  
+                 1px -1px 0 #fff,
+                -1px  1px 0 #fff,
+                 1px  1px 0 #fff;
+            
             text-align: center;
             margin-bottom: 15px; 
             font-size: 1.6em; 
@@ -73,14 +99,14 @@
         
         /* Ajuste para aumentar o contraste do texto dentro dos campos transparentes */
         input[type="text"]::placeholder {
-            color: rgba(51, 51, 51, 0.7); /* Torna o placeholder mais escuro */
+            color: rgba(51, 51, 51, 0.7); 
         }
 
         /* Estilo dos Campos de Input */
         input[type="text"] { 
             width: 100%;
             padding: 10px; 
-            /* Aumenta a transparência dos campos individuais para 0.85 */
+            /* Campos de input ainda visíveis */
             background-color: rgba(255, 255, 255, 0.85); 
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -132,6 +158,7 @@
     </div>
 </body>
 </html>
+
 
 
 
