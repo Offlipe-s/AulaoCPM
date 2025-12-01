@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscrição</title>
+    <title>Inscrição - Aulão Solidário!</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
     <style>
         /* Reset básico */
@@ -26,7 +26,6 @@
             min-height: 100vh; 
             display: flex;
             justify-content: center;
-            /* Alterado para flex-start para controlar a posição com margin-top */
             align-items: flex-start; 
             padding: 20px 10px; 
         }
@@ -34,30 +33,28 @@
         /* Container do Formulário */
         .form-container {
             /* MÁXIMA TRANSPARÊNCIA SOLICITADA (0.60) */
-            background-color: rgba(255, 255, 255, 0.0); 
+            background-color: rgba(255, 255, 255, 0.6); 
             padding: 20px; 
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 400px; 
-            /* AUMENTADO o margin-top para empurrar o bloco para baixo */
-            margin-top: 40vh; 
+            /* margin-top ajustado para empurrar o bloco para baixo */
+            margin-top: 25vh; 
         }
         
         /* Ajuste para telas menores (celular) */
         @media (max-width: 600px) {
             .form-container {
                 padding: 18px;
-                /* AUMENTADO para celular para aparecer o rosto na foto */
-                margin-top: 35vh; 
+                /* margin-top ajustado para celular */
+                margin-top: 15vh; 
             }
         }
 
-        /* Título */
+        /* Título Principal (com Bordas Brancas) */
         h1 {
-            /* COR PRETA */
             color: #000000; 
-            /* EFEITO DE BORDA BRANCA USANDO TEXT-SHADOW */
             text-shadow: 
                 -1px -1px 0 #fff,  
                  1px -1px 0 #fff,
@@ -74,12 +71,18 @@
             margin-bottom: 15px;
         }
 
-        /* Estilo das Labels */
+        /* Estilo das Labels (Nome Completo e Escola - COM BORDAS BRANCAS) */
         label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
-            color: #333;
+            color: #000000; /* Cor do texto: Preto */
+            /* EFEITO DE BORDA BRANCA */
+            text-shadow: 
+                -1px -1px 0 #fff,  
+                 1px -1px 0 #fff,
+                -1px  1px 0 #fff,
+                 1px  1px 0 #fff;
         }
         
         /* Ajuste para aumentar o contraste do texto dentro dos campos transparentes */
@@ -91,7 +94,6 @@
         input[type="text"] { 
             width: 100%;
             padding: 10px; 
-            /* Campos de input ainda visíveis */
             background-color: rgba(255, 255, 255, 0.85); 
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -143,6 +145,7 @@
     </div>
 </body>
 </html>
+
 
 
 
