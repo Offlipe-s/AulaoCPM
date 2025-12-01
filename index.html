@@ -18,39 +18,41 @@
         body {
             background-image: url('Simulado.jpg'); 
             background-size: cover; 
-            background-position: center top; 
+            /* Ajuste para mover o fundo para baixo, expondo o topo da imagem */
+            background-position: center 20%; 
             background-repeat: no-repeat; 
             background-attachment: fixed; 
             min-height: 100vh; 
             display: flex;
             justify-content: center;
-            align-items: flex-start; 
+            align-items: flex-start; /* Alinha o formulário no topo da área visível */
             padding: 20px 10px; 
         }
 
         /* Container do Formulário */
         .form-container {
-            /* Alterado para 0.90 para ser levemente mais transparente */
             background-color: rgba(255, 255, 255, 0.90); 
-            padding: 30px;
+            /* Redução do padding para compactar a caixa (era 30px) */
+            padding: 20px; 
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 450px; 
-            /* Reduzido de 15vh para 10vh para subir o formulário */
-            margin-top: 10vh; 
+            /* Reduzido para ficar bem próximo ao topo da tela (era 10vh) */
+            margin-top: 5vh; 
         }
         
         /* Ajuste para telas menores (celular) */
         @media (max-width: 600px) {
             .form-container {
-                /* Reduzido de 5vh para 2vh para subir o formulário na tela do celular */
-                margin-top: 2vh; 
-                padding: 20px;
+                /* Reduzido para encostar no topo (era 2vh) */
+                margin-top: 0vh; 
+                /* Padding também reduzido no celular */
+                padding: 15px;
             }
             body {
-                /* Mantido para centralizar melhor a imagem */
-                background-position: center top; 
+                /* Mantido ou ajustado ligeiramente para celular */
+                background-position: center 10%; 
             }
         }
 
@@ -58,8 +60,9 @@
         h1 {
             color: #007bff; 
             text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.8em;
+            /* Título mais perto dos campos (era 20px) */
+            margin-bottom: 15px; 
+            font-size: 1.6em; /* Levemente menor para caber melhor */
         }
 
         /* Estilo dos Grupos de Formulário */
@@ -75,10 +78,11 @@
             color: #333;
         }
 
-        /* Estilo dos Campos de Input e Select */
-        input[type="text"] { /* Removido 'select' pois o campo foi excluído */
+        /* Estilo dos Campos de Input */
+        input[type="text"] { 
             width: 100%;
-            padding: 12px;
+            /* Padding dos campos reduzido (era 12px) */
+            padding: 10px; 
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1em;
@@ -88,12 +92,13 @@
         button {
             background-color: #28a745; 
             color: white;
-            padding: 12px 20px;
+            /* Padding do botão reduzido (era 12px 20px) */
+            padding: 10px 15px; 
             border: none;
             border-radius: 5px;
             cursor: pointer;
             width: 100%;
-            font-size: 1.1em;
+            font-size: 1.0em; /* Levemente menor */
             font-weight: bold;
             transition: background-color 0.3s ease;
         }
@@ -111,14 +116,13 @@
         <form id="registration-form" name="cadastro-aulao" method="POST" action="https://api.web3forms.com/submit">
             
             <input type="hidden" name="access_key" value="67697b2d-48b8-4fd0-bf81-b7d8ea4b4394">
-            
             <input type="hidden" name="redirect" value="https://offlipe-s.github.io/AulaoCPM/sucesso.html">
             
             <div class="form-group">
                 <label for="nome">Nome Completo:</label>
                 <input type="text" id="nome" name="Nome Completo" required placeholder="Seu nome">
             </div>
-            
+
             <div class="form-group">
                 <label for="escola">Nome da Sua Escola:</label>
                 <input type="text" id="escola" name="Nome da Escola" required placeholder="Ex: ETE Ginásio Pernambucano">
@@ -130,6 +134,7 @@
     </div>
 </body>
 </html>
+
 
 
 
