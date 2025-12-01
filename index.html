@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscrição - Aulão Solidário ETE/Enem!</title>
+    <title>Inscrição - Aulão Solidário!</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
     <style>
         /* Reset básico */
@@ -16,7 +16,7 @@
 
         /* Fundo com a imagem */
         body {
-            background-image: url('Simulado.jpg'); /* */
+            background-image: url('Simulado.jpg'); 
             background-size: cover; 
             background-position: center top; 
             background-repeat: no-repeat; 
@@ -30,23 +30,27 @@
 
         /* Container do Formulário */
         .form-container {
-            background-color: rgba(255, 255, 255, 0.95); 
+            /* Alterado para 0.90 para ser levemente mais transparente */
+            background-color: rgba(255, 255, 255, 0.90); 
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 450px; 
-            margin-top: 15vh; 
+            /* Reduzido de 15vh para 10vh para subir o formulário */
+            margin-top: 10vh; 
         }
         
         /* Ajuste para telas menores (celular) */
         @media (max-width: 600px) {
             .form-container {
-                margin-top: 5vh; 
+                /* Reduzido de 5vh para 2vh para subir o formulário na tela do celular */
+                margin-top: 2vh; 
                 padding: 20px;
             }
             body {
-                background-position: center -50px; 
+                /* Mantido para centralizar melhor a imagem */
+                background-position: center top; 
             }
         }
 
@@ -72,8 +76,7 @@
         }
 
         /* Estilo dos Campos de Input e Select */
-        input[type="text"], 
-        select {
+        input[type="text"] { /* Removido 'select' pois o campo foi excluído */
             width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
@@ -114,15 +117,6 @@
             <div class="form-group">
                 <label for="nome">Nome Completo:</label>
                 <input type="text" id="nome" name="Nome Completo" required placeholder="Seu nome">
-            </div>
-
-            <div class="form-group">
-                <label for="tipoAulao">Escolha o Aulão:</label>
-                <select id="tipoAulao" name="Aulão Escolhido" required>
-                    <option value="">Selecione uma opção</option>
-                    <option value="ETE">Aulão ETE (Escola Técnica Estadual)</option>
-                    <option value="ENEM">Aulão ENEM</option>
-                </select>
             </div>
             
             <div class="form-group">
